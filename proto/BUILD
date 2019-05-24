@@ -4,6 +4,7 @@ package(
 proto_library(
   name = "p4types_proto",
   srcs = ["p4/config/v1/p4types.proto"],
+  strip_import_prefix = "proto"
 )
 
 proto_library(
@@ -13,11 +14,13 @@ proto_library(
       ":p4types_proto",
       "@com_google_protobuf//:any_proto",
   ],
+  strip_import_prefix = "proto"
 )
 
 proto_library(
   name = "p4data_proto",
   srcs = ["p4/v1/p4data.proto"],
+  strip_import_prefix = "proto"
 )
 
 proto_library(
@@ -31,5 +34,6 @@ proto_library(
       "@com_google_protobuf//:any_proto",
       "@com_github_googleapis//:status_proto",
   ],
+  strip_import_prefix = "proto"
 )
 
